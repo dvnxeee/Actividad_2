@@ -11,7 +11,6 @@ El sistema está compuesto por dos microservicios principales:
 
 Se implementa comunicación entre microservicios mediante Spring Cloud OpenFeign.
 
----
 
 ## Arquitectura
 
@@ -28,7 +27,6 @@ El microservicio de Reservas consume el microservicio de Canchas mediante un cli
 * Reservas consulta Canchas para validar existencia
 * Si la cancha no existe, no se permite crear la reserva
 
----
 
 ## Tecnologías Utilizadas
 
@@ -40,7 +38,6 @@ El microservicio de Reservas consume el microservicio de Canchas mediante un cli
 * MySQL
 * Maven
 
----
 
 ## Estructura del Proyecto
 
@@ -59,7 +56,6 @@ El microservicio de Reservas consume el microservicio de Canchas mediante un cli
 * Entity
 * Cliente Feign para comunicación con Canchas
 
----
 
 ## Configuración
 
@@ -77,7 +73,6 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
----
 
 ## Ejecución del Proyecto
 
@@ -91,7 +86,6 @@ CREATE DATABASE club_deportivo2;
 3. Ejecutar el microservicio de Canchas (puerto 8081)
 4. Ejecutar el microservicio de Reservas (puerto 8082)
 
----
 
 ## Endpoints
 
@@ -103,7 +97,6 @@ CREATE DATABASE club_deportivo2;
 GET /canchas/{id}
 ```
 
----
 
 ### Microservicio Reservas
 
@@ -123,7 +116,6 @@ Ejemplo de cuerpo JSON:
 }
 ```
 
----
 
 #### Listar reservas
 
@@ -131,7 +123,6 @@ Ejemplo de cuerpo JSON:
 GET /api/reservas
 ```
 
----
 
 #### Buscar reservas por cancha
 
@@ -139,7 +130,6 @@ GET /api/reservas
 GET /api/reservas/cancha/{canchaId}
 ```
 
----
 
 ## Validación entre Microservicios
 
@@ -158,7 +148,6 @@ Ejemplo de respuesta de error:
 }
 ```
 
----
 
 ## Pruebas con Postman
 
@@ -172,7 +161,6 @@ Ejemplo de respuesta de error:
 * Se envía un canchaId inexistente
 * Resultado: se retorna error 404 y no se registra la reserva
 
----
 
 ## Consideraciones Técnicas
 
@@ -181,7 +169,6 @@ Ejemplo de respuesta de error:
 * Separación de responsabilidades por servicio
 * Persistencia independiente para cada microservicio
 
----
 
 ## Conclusión
 
@@ -192,9 +179,3 @@ El sistema implementa correctamente una arquitectura de microservicios, permitie
 * Manejo adecuado de errores
 
 Esto asegura una solución escalable, mantenible y alineada con buenas prácticas de desarrollo backend.
-
----
-
-## Autor
-
-Proyecto desarrollado en el contexto de la asignatura de desarrollo backend en Ingeniería en Informática.
